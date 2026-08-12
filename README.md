@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Neural Network From Scratch
 
 A binary classification neural network implemented from scratch using Python and NumPy. The project uses the Titanic dataset to predict whether a passenger survived based on selected passenger information.
@@ -188,6 +187,3 @@ The model is evaluated using:
 | Actual 1 | FN | TP |
 
 ![Confusion Matrix](results/confusion_matrix.png)
-
->>>>>>> c6caaf4 (Add project documentation)
-  
