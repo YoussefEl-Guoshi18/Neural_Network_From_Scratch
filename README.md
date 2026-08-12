@@ -89,3 +89,5 @@ The model is evaluated using:
 |---|---:|---:|
 | Actual 0 | TN | FP |
 | Actual 1 | FN | TP |
+
+![Confusion Matrix](results/confusion_matrix.png)
