@@ -178,6 +178,8 @@ The model is evaluated using:
 | Recall | 63.51% |
 | F1 Score | 70.68% |
 
+![Training Loss](results/training_loss.png)
+
 ### Confusion Matrix
 
 | | Predicted 0 | Predicted 1 |
@@ -186,4 +188,6 @@ The model is evaluated using:
 | Actual 1 | FN | TP |
 
 ![Confusion Matrix](results/confusion_matrix.png)
+
 >>>>>>> c6caaf4 (Add project documentation)
+  
