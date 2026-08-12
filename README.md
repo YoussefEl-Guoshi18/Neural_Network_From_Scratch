@@ -63,3 +63,29 @@ Sigmoid activation
 - Weight initialization: He initialization
 - Early stopping: Enabled
 - Classification threshold: 0.5
+
+## Evaluation
+
+The model is evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+### Results
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 78.21% |
+| Precision | 79.66% |
+| Recall | 63.51% |
+| F1 Score | 70.68% |
+
+### Confusion Matrix
+
+| | Predicted 0 | Predicted 1 |
+|---|---:|---:|
+| Actual 0 | TN | FP |
+| Actual 1 | FN | TP |
