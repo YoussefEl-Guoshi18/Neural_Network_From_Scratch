@@ -51,3 +51,15 @@ ReLU activation
 Output Layer
 1 neuron
 Sigmoid activation
+```
+## Model Configuration
+
+- Input features: 4
+- Hidden neurons: 10
+- Hidden activation: ReLU
+- Output activation: Sigmoid
+- Learning rate: 0.01
+- Maximum epochs: 1000
+- Weight initialization: He initialization
+- Early stopping: Enabled
+- Classification threshold: 0.5
