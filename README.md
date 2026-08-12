@@ -187,3 +187,108 @@ The model is evaluated using:
 | Actual 1 | FN | TP |
 
 ![Confusion Matrix](results/confusion_matrix.png)
+
+## Experiments
+
+Several experiments were carried out during development to understand how different parts of the neural network affect training and evaluation.
+
+### Weight Initialization
+
+The network initially used randomly generated weights. He initialization was then implemented to provide a more suitable starting point for the weights in the ReLU hidden layer.
+
+This helped demonstrate how the choice of weight initialization can affect the starting loss and training behaviour.
+
+### Early Stopping
+
+Early stopping was implemented using a tolerance value to detect when the loss was no longer improving significantly.
+
+Rather than always training for all 1000 epochs, the network stops when the improvement in loss remains below the tolerance for a specified number of iterations.
+
+### Classification Threshold
+
+The default classification threshold was set to `0.5`.
+
+Different thresholds were tested to understand the relationship between precision and recall. Lowering the threshold resulted in more positive predictions, increasing recall while generally reducing precision.
+
+This demonstrated the trade-off involved when selecting a classification threshold.
+
+### Evaluation Metrics
+
+Accuracy, precision, recall and F1 score were implemented from scratch rather than using pre-built metric functions.
+
+A confusion matrix was also implemented to calculate:
+
+- True Positives (TP)
+- False Positives (FP)
+- False Negatives (FN)
+- True Negatives (TN)
+
+These values were then used to calculate the classification metrics.
+
+## Project Structure
+
+```text
+Neural_Network_From_Scratch/
+├── notebooks/
+│   └── experiments.ipynb
+├── results/
+│   ├── confusion_matrix.png
+│   └── training_loss.png
+├── src/
+│   ├── models/
+│   │   ├── activations.py
+│   │   ├── loss.py
+│   │   └── neural_network.py
+│   ├── utils/
+│   │   ├── metrics.py
+│   │   └── preprocessing.py
+│   ├── main.py
+│   └── train.py
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YoussefEl-Guoshi18/Neural_Network_From_Scratch.git
+cd Neural_Network_From_Scratch
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+Place the Titanic `train.csv` dataset inside:
+
+```text
+data/train.csv
+```
+
+Then run the training script:
+
+```bash
+cd src
+python train.py
+```
+
+## What I Learned
+
+This project helped me develop a deeper understanding of how neural networks work internally, including:
+
+- How forward propagation generates predictions
+- How backpropagation calculates gradients
+- How gradient descent updates weights and biases
+- How activation functions affect the network
+- Why feature scaling is important
+- How weight initialization affects training
+- How binary cross-entropy measures classification error
+- How precision and recall change with the classification threshold
+- How confusion matrices can be used to evaluate classification performance
