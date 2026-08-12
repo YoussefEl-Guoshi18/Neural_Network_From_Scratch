@@ -50,6 +50,8 @@ class NeuralNetwork:
     self.b2 -= self.learning_rate * db2
 
   def train(self, X, Y, epochs, print_every=50, tol=0.001, patience=5):
+    losses = []
+
     best_loss = float("inf")
     patience_count = 0
 
@@ -58,6 +60,7 @@ class NeuralNetwork:
       self.forward(X)
 
       loss = binary_cross_entropy(Y, self.A2)
+      losses.append(loss)
 
       self.backward(Y)
 
@@ -73,3 +76,5 @@ class NeuralNetwork:
       if patience_count >= patience:
         print(f"Converged at epoch {epoch}")
         break
+
+    return losses
